@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<!-- saved from url=(0046)https://s.seaotc.com/#/user/login/redirect=%2F -->
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+		<title>Jike后台管理系统</title>
+		<meta name="renderer" content="webkit">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
+		<link rel="icon" href="/favicon.ico">
+		<link rel="stylesheet" href="./layui.css" media="all">
+		<script>
+			/^http(s*):\/\//.test(location.href) || alert('请先部署到 localhost 下再访问');
+  </script>
+		<link id="layuicss-layer" rel="stylesheet" href="./layer.css" media="all">
+		<link id="layuicss-layuiAdmin" rel="stylesheet" href="./admin.css" media="all">
+	</head>
+	<body layadmin-themealias="default" class="layui-layout-body">
+		<div id="LAY_app" class="layadmin-tabspage-none">
+			<script type="text/html" template="">
+				<link rel="stylesheet" href="{{ layui.setter.base }}style/login.css?v={{ layui.admin.v }}-1" media="all">
+</script>
+			<link rel="stylesheet" href="./login.css" media="all">
+			<style type="text/css">
+				#LAY-user-login {
+					position: relative;
+					background: url(./login_bg_1.svg) no-repeat center;
+				}
+
+				#LAY-user-login * {
+					box-sizing: border-box;
+				}
+
+				.layadmin-user-login-body .layui-form-item .layui-input {
+					padding-left: 20px;
+				}
+
+				.background-shadow,
+				.layadmin-user-login-main {
+					width: 556px;
+					height: 480px;
+					background: rgba(255, 255, 255, 1);
+					box-shadow: 0px 0px 12px rgba(66, 0, 178, 1);
+					opacity: 1;
+					border-radius: 32px;
+					position: absolute;
+					left: 50%;
+					margin-left: -278px;
+				}
+
+				.layadmin-user-login-main {
+					z-index: 2;
+				}
+
+				.background-shadow {
+					z-index: 1;
+					background-color: #fff;
+					transform: rotate(3deg);
+				}
+
+				.layadmin-user-login-header {
+					width: 556px;
+					height: 200px;
+					background: rgba(107, 37, 227, 1);
+					opacity: 1;
+					border-radius: 32px 32px 0px 0px;
+					padding: 60px 0 0 84px;
+				}
+
+				.layadmin-user-login-header .logo {
+					overflow: hidden;
+					padding-left: 62px;
+					height: 46px;
+					background: url(../dist/style/res/login/logo.svg) no-repeat center left;
+					text-align: left;
+				}
+
+				.layadmin-user-login-header .logo p:nth-child(1) {
+					font-size: 24px;
+					font-weight: bold;
+					color: #fff;
+					margin-top: -4px;
+				}
+
+				.layadmin-user-login-header .logo p:nth-child(2) {
+					font-size: 16px;
+					font-family: Bahnschrift;
+					font-weight: 400;
+					line-height: 22px;
+					color: rgba(255, 255, 255, 1);
+					opacity: 0.3;
+				}
+
+				.layadmin-user-login-header .title {
+					font-size: 16px;
+					font-family: Source Han Sans CN;
+					font-weight: 400;
+					color: rgba(255, 255, 255, 1);
+					opacity: 1;
+					text-align: left;
+					/* margin-top: 32px; */
+				}
+
+				.layadmin-user-login-body {
+					margin: 0 auto;
+					width: 392px;
+				}
+
+				.layadmin-user-login-body .model-name {
+					margin-top: 56px;
+					margin-bottom: 16px;
+					font-size: 24px;
+					font-family: Source Han Sans CN;
+					font-weight: 400;
+					line-height: 41px;
+					color: rgba(107, 37, 227, 1);
+					opacity: 1;
+				}
+
+				.layui-form-item {
+					margin-bottom: 0;
+				}
+
+				.layui-form-item input {
+					height: 48px;
+				}
+
+				#LAY-user-login-cellphone {
+					border-bottom: 1px solid transparent;
+				}
+
+				#LAY-user-login-cellphone.layui-form-danger:focus {
+					border-bottom: 1px solid #ff6534;
+				}
+
+				.smcode {
+					margin-top: 16px;
+				}
+
+				.smcode input {
+					border-right: 0;
+				}
+
+				.smcode .layui-btn {
+					height: 48px;
+				}
+
+				.layadmin-link-forget {
+					color: #666666;
+					font-size: 16px;
+				}
+
+				.layadmin-link-register {
+					color: #601BD8;
+					font-size: 16px;
+				}
+
+				.layadmin-link-register:hover {
+					color: #732fea;
+				}
+
+				.login-btn {
+					width: 190px;
+					height: 48px;
+					line-height: 48px;
+					border-radius: 29px;
+					background-color: #6B25E3;
+				}
+
+				.login-title {
+					text-align: left;
+					font-size: 20px;
+					margin: 20px 0 10px;
+					color: white;
+					font-weight: 600;
+				}
+
+				.layui-anim-upbit {
+					width: 392px;
+				}
+
+				dd>span.left {
+					display: inline-block;
+					width: 200px;
+					text-align: left;
+				}
+
+				dd>span.right {
+					display: inline-block;
+					width: 150px;
+					text-align: right;
+				}
+
+				.layui-form-select dl dd.layui-this {
+					background-color: #6b25e3;
+					border-radius: 3px;
+				}
+
+				.layui-tab-card {
+					width: 392px;
+					margin: 60px auto 0;
+				}
+
+				.layui-tab-title li {
+					width: 50%;
+					margin: 0 !important;
+				}
+
+				.layui-tab-title .layui-this:after {
+					height: 0;
+				}
+			</style>
+			<div class="layadmin-user-login layadmin-user-display-show" id="LAY-user-login" style="display: none;">
+
+				<div class="layadmin-user-login-main">
+					<div class="layadmin-user-login-header">
+						<div class="login-title">Jike后台管理系统</div>
+						<div class="title">为企业提供便捷的应用下载解决方案</div>
+					</div>
+					<div class="layadmin-user-login-body layui-form" style="margin-top: 30px;">
+						<div class="layui-form-item" id="loginType" style="margin:16px 0 30px 0;">
+							<input type="text" name="email" maxlength="" id="LAY-user-login-email"
+							 lay-verify="required" placeholder="管理员账户" class="layui-input"></div>
+						<div class="layui-form-item">
+							<input type="password" name="password" maxlength="20" oninput="layui.admin.realTimeValidate(this, &#39;password&#39;)"
+							 id="LAY-user-login-password" lay-verify="pass" placeholder="密码" class="layui-input">
+						</div>
+
+						<div class="layui-form-item" style="margin:16px 0 30px 0;">
+						</div>
+						<div class="layui-form-item" style="text-align: center;">
+							<button style="margin: 0 auto;" class="layui-btn layui-btn-fluid login-btn" lay-submit="" lay-filter="LAY-user-login-submit">登 入</button>
+						</div>
+					</div>
+
+				</div>
+
+				<div class="background-shadow"></div>
+
+			</div>
+			<script src="./md5.min.js.下载"></script>
+			<script>
+				layui.use(['admin', 'form', 'user', 'element'], function() {
+					$ = layui.jquery, setter = layui.setter, admin = layui.admin, form = layui.form, element = layui.element, router =
+						layui.router(), search = router.search;
+					let formData;
+					var operationMode = 1; //登录方式
+					var telStr =
+						`<div class="layui-input-inline" style="width: 132px;margin-right: 0;">
+                  <select lay-filter="areaCode" name="areaCode" lay-verify="required" lay-search=""></select>
+                </div>
+                <input style="width: 260px;margin-right: 0;" type="text" oninput="layui.admin.realTimeValidate(this, 'number')" name="tel" id="LAY-user-login-cellphone" lay-verify="telephone" placeholder="手机号" class="layui-input">`;
+					var emailStr =
+						`<input type="text" name="email" maxlength=""  id="LAY-user-login-email" lay-verify="required" placeholder="请输入注册邮箱" class="layui-input">`;
+					$("#loginType").append(telStr)
+					element.on('tab(test1)', function(data) {
+						console.log(data)
+						if (data.index == 1) { //邮箱
+							$("#loginType").html('')
+							$("#loginType").append(emailStr)
+							operationMode = 2;
+							$("#LAY-user-login-smscode").attr('placeholder', '邮箱验证码').attr('name', 'emailCode')
+							$("input").val('')
+						} else if (data.index == 0) { //手机
+							$("#loginType").html('')
+							$("#loginType").append(telStr)
+							$("input").val('')
+							$("#LAY-user-login-smscode").attr('placeholder', '短信验证码').attr('name', 'code')
+							getAreaCode();
+							operationMode = 1
+						}
+					});
+					var areaCode = '86';
+
+					let htmlStr =
+						`<div id="getPhoneCode" class="layadmin-user-login-box layadmin-user-login-body layui-form">
+  <div class="layui-form-item">
+    <div class="layui-row">
+      <div class="layui-col-xs7">
+        <label class="layadmin-user-login-icon layui-icon layui-icon-vercode" for="LAY-user-login-smscode"></label>
+        <input type="text" name="code" id="LAY-user-login-smscode" lay-verify="required" placeholder="短信验证码" class="layui-input">
+      </div>
+      <div class="layui-col-xs5">
+        <div style="margin-left: 10px;">
+          <button type="button" class="layui-btn layui-btn-primary layui-btn-fluid" id="LAY-user-login-getsmscode">获取验证码</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="layui-form-item">
+    <div class="layui-row">
+      <div class="layui-col-xs4" style="height: 5px;">
+
+      </div>
+      <div class="layui-col-xs8" style="text-align: right;">
+        <button class="layui-btn layui-btn-primary layui-layer-close" style="position: relative;">取消</button>
+        <button id="beSureBtn" class="layui-btn" lay-submit lay-filter="LAY-user-login2-submit">确定</button>
+      </div>
+    </div>
+  </div>
+
+</div>`;
+
+					var index;
+
+
+					form.render();
+
+					function getAreaCode() {
+						admin.req({
+							url: '/merchant/api/open/queryPhoneAreaCode' //实际使用请改成服务端真实接口
+								,
+							type: 'post',
+							contentType: "application/json",
+							done: function(res) {
+								if (res.code == 0) {
+									var htmlStr = '';
+									res.data.forEach(function(item) {
+										htmlStr += "<option value=" + item.code + " name=" + item.nameZh + ">" + item.code + "</option>";
+									});
+									$("select[name='areaCode']").append(htmlStr);
+									$("select[name='areaCode']").val('86');
+									form.render('select');
+								} else {
+									layer.msg('获取区号失败', {
+										time: 1000
+									});
+								}
+							}
+						});
+					}
+
+					getAreaCode();
+
+					form.on('select(areaCode)', function(data) {
+						areaCode = data.value;
+					})
+					// console.log(areaCode)
+					//发送短信验证码
+					$("#LAY-user-login-getsmscode").on('click', function() {
+						console.log(operationMode)
+						if (operationMode == 1) {
+							admin.sendAuthCode({
+								elem: '#LAY-user-login-getsmscode',
+								elemPhone: '#LAY-user-login-cellphone',
+								ajax: {
+									url: '/exchange/api/open/loginSms', //实际使用请改成服务端真实接口
+									type: 'post',
+									contentType: 'application/json;charset=utf-8',
+									where: {
+										'passwordType': 1,
+										'areaCode': areaCode
+									}
+								}
+							});
+						} else if (operationMode == 2) {
+							var emailStr = /\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*/;
+							if (emailStr.test($("#LAY-user-login-email").val())) {
+								admin.sendEmailCode({
+									elem: '#LAY-user-login-getsmscode',
+									elemPhone: '#LAY-user-login-email',
+									ajax: {
+										url: '/exchange/api/open/loginSms' //实际使用请改成服务端真实接口
+											,
+										type: 'post',
+										contentType: "application/json",
+										where: {
+											// 'operationMode':2,
+											email: $("#LAY-user-login-email").val()
+										}
+									}
+								});
+							} else {
+								layer.msg('请输入正确邮箱格式', {
+									time: 1000
+								});
+								return false;
+							}
+						}
+
+					})
+
+
+					//登录提交96666666666666
+					form.on('submit(LAY-user-login-submit)', function(obj) {
+
+						obj.field.adminpassword =obj.field.password;
+						obj.field.adminname = obj.field.email;
+						formData = obj.field;
+
+						//请求登入接口
+						admin.req({
+							url: '/admin.php?action=login' //实际使用请改成服务端真实接口
+								,
+							data: JSON.stringify(obj.field),
+							type: 'post',
+							contentType: 'application/json;charset=utf-8',
+							success: function(res) {
+								alert(res);
+							}
+						});
+					});
+
+					// 带验证码的
+					form.on('submit(LAY-user-login2-submit)', function(obj) {
+						formData.code = obj.field.code;
+						admin.req({
+							url: '/exchange/api/open/login' //实际使用请改成服务端真实接口
+								,
+							data: JSON.stringify(formData),
+							type: 'post',
+							contentType: 'application/json;charset=utf-8',
+							success: function(res) {
+								if (res.code != 0) return;
+								layer.close(index);
+
+								// 登入成功的提示与跳转
+								layer.msg('登入成功', {
+									offset: '15px',
+									icon: 1,
+									time: 1000
+								}, function() {
+									location.hash = search.redirect ? decodeURIComponent(search.redirect) : '/';
+								});
+
+
+							}
+						});
+					});
+
+					function getUserInfo() {
+						// 请求用户信息
+						admin.req({
+							url: '/exchange/api/queryUser' //实际使用请改成服务端真实接口
+								,
+							type: 'post',
+							contentType: 'application/json;charset=utf-8',
+							success: function(res) {
+
+								console.log("user", res);
+								if (res.code == 0) {
+									layui.data(setter.tableName, {
+										key: 'realName',
+										value: res.data.realName
+									});
+								} else {
+									// getUserInfo();
+								}
+							}
+						});
+					}
+
+
+				});
+			</script>
+		</div>
+		<script src="./layui.js.下载"></script>
+		<script>
+			if (!String.prototype.padEnd) {
+				String.prototype.padEnd = function padEnd(targetLength, padString) {
+					targetLength = targetLength >> 0; //floor if number or convert non-number to 0;
+					padString = String((typeof padString !== 'undefined' ? padString : ''));
+					if (this.length > targetLength) {
+						return String(this);
+					} else {
+						targetLength = targetLength - this.length;
+						if (targetLength > padString.length) {
+							padString += padString.repeat(targetLength / padString.length); //append to original to ensure we are longer than needed
+						}
+						return String(this) + padString.slice(0, targetLength);
+					}
+				};
+			}
+			layui.config({
+				base: '../dist/' //指定 layuiAdmin 项目路径，本地开发用 src，线上用 dist
+					// ,version: '2.5.2.1'
+					,
+				version: (new Date()).getTime()
+			}).use('index');
+			var logDebug = false;
+			console.log = (function(oriLogFunc) {
+				return function() {
+					if (logDebug) {
+						oriLogFunc.apply(this, arguments);
+					}
+				}
+			})(console.log);
+			window.modelTimer = null;
+		</script>
+
+		<style id="LAY_layadmin_theme">
+			.layui-side-menu,
+			.layadmin-pagetabs .layui-tab-title li:after,
+			.layadmin-pagetabs .layui-tab-title li.layui-this:after,
+			.layui-layer-admin .layui-layer-title,
+			.layadmin-side-shrink .layui-side-menu .layui-nav>.layui-nav-item>.layui-nav-child {
+				background-color: #20222A !important;
+			}
+
+			.layui-nav-tree .layui-this,
+			.layui-nav-tree .layui-this>a,
+			.layui-nav-tree .layui-nav-child dd.layui-this,
+			.layui-nav-tree .layui-nav-child dd.layui-this a {
+				background-color: #009688 !important;
+			}
+
+			.layui-layout-admin .layui-logo {
+				background-color: #20222A !important;
+			}
+		</style>
+	</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<form id="form"  method="post" enctype="multipart/form-data">
+		    <label for="file">文件名：</label>
+		    <input type="file" name="file[cert]" id="file"><br>
+		    <a href="#" onclick="sub()">66666</a>
+		</form>
+	</body>
+	<script src="./jquery.min.js"></script>
+	<script type="text/javascript">
+		function sub(){
+			var file = $(form).serializeArray();
+			var processData = true;
+        var contentType = 'application/x-www-form-urlencoded';
+        var cache = true;
+		
+		$.ajax({
+        type : "POST",
+        data : file,
+        url : "./index.php",
+        dataType: 'json',
+        beforeSend: function( xhr ) {
+        },
+        success : function(result, textStatus, jqXHR) {
+        },
+        error : function(jqXHR, textStatus, errorThrown) {
+        }
+    });
+		}
+	</script>
+</html>

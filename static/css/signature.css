@@ -1,0 +1,89 @@
+﻿.signature-flow {
+    float: left;
+    width: 20%;
+    padding-left: 15px;
+    padding-right: 15px;
+    position: relative;
+}
+.signature-flow-xs {
+    position: relative;
+}
+.height40 {
+    height: 40px;
+}
+.signature-flow>div.arrow{
+   width: 10px;
+    height: 10px;
+    right: -10px;
+    display: inline-block;
+    margin-left: 10px;
+    background: url(../images/arrow.png) no-repeat;
+    position: absolute;
+    top: 5px;
+}
+.signature-flow-xs>div.arrow{
+   width: 10px;
+    height: 10px;
+    bottom: 11px;
+    left: 12%;
+    display: inline-block;
+    background: url(../images/arrow.png) no-repeat;
+    position: absolute;
+    transform:rotate(90deg);
+    -ms-transform:rotate(90deg);     /* IE 9 */
+    -moz-transform:rotate(90deg);    /* Firefox */
+    -webkit-transform:rotate(90deg); /* Safari 和 Chrome */
+    -o-transform:rotate(90deg);  /* Opera */
+}
+.signature-flow-xs{
+    margin-top: 6px;
+}
+.signature-header {
+    background-image: url(../images/bgpage_4.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 350px;
+    background-position: center;
+}
+section.borderbn:first-child {
+    padding-top: 0px;
+}
+@media(max-width: 992px) {
+    .mt100 {
+        margin-top: 50px !important;
+    }
+    .m-t-xl {
+        margin-top: 0px;
+    }
+    section.borderbn {
+        padding-bottom: 0px;
+        padding-top: 0px;
+    }
+    .pt130 {
+        padding-top: 50px !important;
+    }
+    .pb130 {
+        padding-bottom: 50px !important;
+    }
+    .mb60 {
+        margin-bottom: 30px !important;
+    }
+    .pt-xs-0 {
+        padding-top: 0px !important;
+    }
+    .font-36 {
+        font-size: 28px !important;
+    }
+    p.mt100 {
+        margin-top: 0px;
+    }
+}
+@media(max-width: 767px) {
+    .btn-detail-aso-top {
+        margin-top: 20px;
+        margin-left: 0px;
+    }
+}
+div.signature-flow-xs p {
+    margin-top: 8px;
+}

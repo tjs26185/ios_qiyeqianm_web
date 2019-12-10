@@ -1,0 +1,138 @@
+﻿﻿@charset "utf-8";
+*{
+	padding:0;
+	margin:0;
+}
+.swiper-container{
+	height:500px;
+}
+.arrow-left {
+  background: url(../images/arrows.png) no-repeat left top;
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  margin-top: -15px;
+  width: 17px;
+  height: 30px;
+  z-index:10;
+}
+.arrow-right {
+  background: url(../images/arrows.png) no-repeat left bottom;
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  margin-top: -15px;
+  width: 17px;
+  height: 30px;
+  z-index:10;
+}
+.pagination {
+  position: absolute;
+  left: 0;
+  text-align: center;
+  bottom:5px;
+  width: 100%;
+}
+.swiper-pagination-switch {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 10px;
+  background: #999;
+  margin: 0 3px;
+  cursor: pointer;
+}
+.swiper-active-switch {
+  background: #fff;
+}
+.swiper-slide{
+	position:relative;
+	opacity:0;
+	transition: opacity 0.7s ease-in-out;
+}
+.swiper-slide-active{
+	opacity:1;
+}
+.swiper-slide .img{
+	position:absolute;
+}
+.inner{
+	position:relative;
+	display:block;
+	width:1000px;
+	height:500px;
+	margin:0 auto;
+}
+.slide1{
+	background-color: #03c36b;
+}
+.slide2{
+	background-color: #1284d0;
+}
+.slide3{
+	background-color: #43cfc8;
+}
+
+.slide1 .s0{left: 25%;margin-left: -154px; top: 100px}
+.slide1 .s1{left: 50%;margin-left: -425.5px;top: 200px;}
+.slide1 .s2{left: 50%;margin-left: -435px;top: 280px}
+.slide1 .s3{left: 0;bottom: 0px;z-index: 5;height:190px}
+.slide1 .s4{right: 0;bottom: 0px;z-index: 0;height: 160px}
+.slide2 .zh-a-1{left: 60px;top: 77px;z-index: 9;}
+.slide2 .zh-a-2{left: 0;top: 0;}
+.slide3 .b-1 {right: 72px;top: 180px;}
+.slide3 .b-2 {left: 90px;top: 180px;}
+.slide3 .b-3 {left: 50%;margin-left: -381px;top: 330px;}
+.slide3 .b-s-1 {width: 100px; left: 50px; bottom:0px;}
+.slide3 .b-s-2 {left: 160px;width: 160px;bottom:0px;}
+.slide3 .b-s-3{left: 390px;width: 58px;bottom:0px;}
+.slide3 .b-s-4{right: 359px; width: 103px;bottom:0px;}
+.slide3 .b-s-5{right: 250px;width: 150px;bottom:0px;}
+.slide3 .b-s-6{right: 0;width: 65px;bottom:0px;}
+.slide3 .b-y-1 {top:40px;left: 50%; margin-left: -20px;}
+.slide3 .b-y-2{top:40px;left:0}
+.slide3 .b-y-3{top:40px;right: 0}
+.loop{
+	animation-iteration-count: infinite;/*无限*/
+	animation-timing-function:linear;/*平滑*/
+}
+.targetBtn {
+    margin-top: 20px;
+    position: absolute;
+    bottom: 60px;
+    left: 352px;
+    z-index: 999;
+}
+.targetBtn a{
+	height:50px;
+	border-radius:50px;
+	background:rgba(0,0,0,.5);
+	float:left;
+	line-height:50px;
+	text-align:center;
+	color:#fff;
+	text-decoration:none;
+	}
+.targetBtn .a1{
+	width:110px;
+	}
+.targetBtn .a2{
+	width:170px;
+	margin-left:15px;
+	}	
+/*自定义CSS动画*/
+.moveRight{-webkit-animation-name:moveRight;animation-name:moveRight}
+@-webkit-keyframes moveRight{0%{opacity: 0;left:0px;}
+10%{opacity: 1;}
+100%{opacity: 1;left:550px;}}
+@keyframes moveRight{0%{opacity: 0;left:0px;}
+10%{opacity: 1;}
+100%{opacity: 1;left:550px;}}
+
+.moveLeft{-webkit-animation-name:moveLeft;animation-name:moveLeft}
+@-webkit-keyframes moveLeft{0%{opacity:0;left:390px;}
+10%{opacity:1;}
+100%{opacity:1;left:-370px;}}
+@keyframes moveLeft{0%{opacity:0;left:390px;}
+10%{opacity:1;}
+100%{opacity:1;left:-370px;}}

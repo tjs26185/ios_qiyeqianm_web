@@ -1,0 +1,36 @@
+﻿.bar {
+    bottom: 270px;
+    margin-top: -85px;
+    position: fixed;
+    right: 0;
+}
+.bar1, .bar2, .bar3 {
+    cursor: pointer;
+    display: block;
+    height: 146px;
+    margin-top: 2px;
+    width: 40px;
+}
+.bar1 {
+    background: rgba(0, 0, 0, 0) url("../images/bar1.png") no-repeat scroll 0 0 / cover ;
+}
+.bar2 {
+    background: rgba(0, 0, 0, 0) url("../images/bar2.png") no-repeat scroll 0 0 / cover ;
+    position: relative;
+}
+.bar3 {
+    background: rgba(0, 0, 0, 0) url("../images/bar3.png") no-repeat scroll 0 0 / cover ;
+    position: relative;
+}
+.tel {
+    background: rgba(0, 0, 0, 0) url("../images/bar3tel.png") no-repeat scroll 0 0;
+    display: block;
+    height: 146px;
+    transform: translateX(40px);
+    transition: all 0.4s ease 0s;
+    width: 120px;
+}
+.bar3:hover .tel {
+    transform: translateX(-80px);
+}
+

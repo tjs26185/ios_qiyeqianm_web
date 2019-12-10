@@ -1,0 +1,249 @@
+﻿.plantform-support{
+    background: url(../fonts/f4a84aeaa2d447129dfeee4fe4442990.woff); } 
+@keyframes dashoffset{
+     0% {
+        stroke-dashoffset:32;
+    } 
+     100% {
+        stroke-dashoffset:0;
+    } 
+}
+#header-banner .pages div.svg{
+    width: 15px;
+    height: 15px;
+    display: inline-block;
+    margin-top: 1px;
+    cursor: pointer;
+}
+#header-banner .pages li{
+    list-style-type: none;
+    width: 10px;
+    height: 10px;
+    border-radius: 10px;
+    background-color: white;
+}
+#header-banner .pages li:hover{
+    -webkit-box-shadow: 0 0 5px 2px white;
+    box-shadow: 0 0 5px 2px white;
+}
+#header-banner .pages li.active{
+    background-color: orange;
+    -webkit-box-shadow: 0 0 5px 2px orange;
+    box-shadow: 0 0 5px 2px orange;
+}
+#header-banner .pages{
+    position: absolute;
+    z-index: 999;
+}
+/*横屏滑动*/
+#header-banner .pages.horizontal{
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    bottom: 5px;
+    padding: 0px;
+}
+#header-banner .pages.horizontal li{
+    display: inline-block;
+    margin-right: 10px;
+}
+#header-banner .pages.horizontal li:last-child{
+    margin-right: 0;
+}
+/*竖屏滑动*/
+#header-banner .pages.vertical{
+    right: 5px;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+#header-banner .pages.vertical li{
+    margin-bottom: 10px;
+}
+#header-banner .pages.vertical li:last-child{
+    margin-bottom: 0;
+}
+.home-header-div>#hot-product{
+    background-color: rgba(255, 255, 255, 0.2);
+    height: 20%;
+    position: relative;
+    z-index:300;
+}
+#hot-product .product-item {
+    width: 20%;
+    height:100%;
+    display: flex;
+    justify-content: left;
+    align-content: left;
+    position: relative;
+    cursor: pointer;
+}
+#hot-product .product-item .product-desc{
+    margin-left: 2%;
+    height: 100%;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-content: center;
+}
+#hot-product .product-item:last-child .border{
+    display:none;
+}
+#hot-product .product-item .border{
+    width: 1px;
+    height: 70%;
+    background-color: rgba(255,255,255,0.2);
+    position: absolute;
+    right: 0;
+    top: 15px;
+}
+#header-banner .sections>.section .img-right{
+    min-height: 350px;
+    max-height: 450px;
+    background-size: contain;
+    background-repeat: no-repeat !important;
+    background-position: right !important;
+    position: absolute;
+    width: 100%;
+    z-index: 100;
+}
+#header-banner .sections>.section .introduce-left{
+    z-index: 999;
+}
+#header-banner .sections>.section .row{
+    position: relative;
+}
+#home-header-div a.btn{
+    border-color: #fff;
+    background: #fff;
+}
+#home-header-div a.btn:hover{
+    border-color: #fefefe;
+    background: #fefefe;
+}
+@media (min-width: 992px) {
+    #header-banner .sections>.section .introduce-left,
+    #header-banner .sections>.section .container{
+        padding-left: 0px;
+    }
+    .home-header-div>#hot-product .container.hidden-xs{
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+}
+@media (max-width: 992px) {
+    #header-banner .sections>.section .img-right {
+        left: 3% !important;
+        height: 300px !important;
+        top: 0% !important;
+        min-height: 0;
+    }
+    .home-header-div {
+        height: 450px;
+    }
+    #header-banner .sections>.section .mt-50 {
+        margin-top: 20px;
+    }
+    #header-banner.header-container {
+        height: 75%;
+    }
+    .home-header-div>#hot-product {
+        height: 25%;
+    }
+}
+#header-banner.header-container>.sections>.section a.product-btn{
+    padding: 7px 35px;
+}
+#header-banner.header-container>.sections>.section:first-child a.product-btn{
+    color:#1abc9c;
+}
+#header-banner.header-container>.sections>.section:nth-child(2) a.product-btn{
+    color:#3548a6;
+}
+#header-banner.header-container>.sections>.section:nth-child(3) a.product-btn{
+    color:#2f79e8;
+}
+#header-banner.header-container>.sections>.section:nth-child(5) a.product-btn,
+#header-banner.header-container>.sections>.section:nth-child(4) a.product-btn{
+    color:#145298;
+}
+#header-banner.header-container>.sections>.section:nth-child(1) div.img-right{
+    left: -15%;
+}
+#header-banner.header-container>.sections>.section:nth-child(2) div.img-right{
+    left: -17%;top: 2%;height: 400px;
+}
+#header-banner.header-container>.sections>.section:nth-child(3) div.img-right{
+    left: -9%;height: 450px;top: 5%;
+}
+#header-banner.header-container>.sections>.section:nth-child(4) div.img-right{
+    left: -15%;top: 9%;
+}
+#header-banner.header-container>.sections>.section:nth-child(5) div.img-right{
+    left: -18%;height: 500px;top: 3%;
+}
+@media (max-width: 768px) {
+    #header-banner .sections>.section>.container{
+        margin-top: 25px;
+    }
+    .home-header-div {
+        height: 390px;
+    }
+    #hot-product .product-item {
+        justify-content: center;
+        align-content: center;
+    }
+    #hot-product .product-item .product-desc {
+        flex-flow: wrap;
+    }
+    #header-banner.header-container>.sections>.section a.product-btn{
+        margin-top: 0px;
+    }
+}
+#hot-product .visible-xs .product-item .product-desc {
+    margin-left: 0;
+    height: auto;
+    padding: 0px;
+}
+#hot-product .visible-xs .product-item {
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+#hot-product .visible-xs .product-item .product-icon{
+    width: 54px;
+    height: 38px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+#hot-product .hidden-xs .product-item:first-child .product-icon{
+    margin-left: 0;
+}
+#hot-product .hidden-xs .product-item .product-icon{
+    width: 40px;
+    height: 32px;
+    background-position: center;
+    background-repeat: no-repeat;
+    transform: translateY(100%);
+    margin-left: 4%;
+}
+#hot-product .hidden-xs .product-item .product-desc p:nth-child(2){
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+    font-weight: 100 !important;
+}
+#hot-product .product-item .product-desc>p {
+    margin: 0;
+}
+@media (min-width: 768px) and (max-width: 992px) { 
+    .home-header-div {
+        height: 450px;
+    }
+}
+
+.frontjs-tip li{
+    list-style-type: none;
+    height:60px;
+}
+
+.frontjs-tip .fa-check-circle{
+    padding-right:10px;
+}

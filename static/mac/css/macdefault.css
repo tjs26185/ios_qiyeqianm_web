@@ -1,0 +1,938 @@
+@charset "utf-8";
+body,a,h1,h2,h3,h4,h5,h6,p,div,em,ul,li {
+  font-family: PingFangSC-Ultralight, 'microsoft yahei';
+}
+html {
+    height: 100%;
+}
+
+/*去除ul中li左边的圆点*/
+ul{
+    list-style: none;
+	padding: 0;
+    margin: 0;
+}
+body {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    overflow: hidden;
+}
+
+#win10 *{
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    user-select:none;
+}
+
+#win10-login{
+    background: black no-repeat fixed;
+    width: 100%;
+    height: 100%;
+    background-size: 100% 100%;
+    position: fixed;
+    z-index: -1;
+    top:0;
+    left:0;
+}
+
+#win10 {
+    width: 100%;
+    height: 100%;
+    background: black no-repeat fixed;
+    background-size: 100% 100%;
+    position: relative;
+    /*padding-top: 20px;*/
+}
+
+#win10 *{
+    scrollbar-arrow-color: #5e6a5c;);  /*图6,三角箭头的颜色*/
+    scrollbar-face-color: #5e6a5c;  /*图5,立体滚动条的颜色*/
+    scrollbar-3dlight-color: #5e6a5c;  /*图1,立体滚动条亮边的颜色*/
+    scrollbar-highlight-color: #5e6a5c;  /*图2,滚动条空白部分的颜色*/
+    scrollbar-shadow-color: #5e6a5c;  /*图3,立体滚动条阴影的颜色*/
+    scrollbar-darkshadow-color: #5e6a5c; /*图4,立体滚动条强阴影的颜色*/
+    scrollbar-track-color: rgba(74, 84, 78, 0.41);  /*图7,立体滚动条背景颜色*/
+    scrollbar-base-color:#5e6a5c;  /*滚动条的基本颜色*/
+}
+
+#win10 hr { height:0px; border-top:1px solid #999; border-right:0px; border-bottom:0px; border-left:0px; }
+
+#win10 .desktop {
+	padding-top:30px;
+    width: 100%;
+    height: 100%;
+}
+
+#win10_task_bar {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    height: 30px;
+    line-height:30px;
+    background-color: rgba(255, 255, 255, 0.75);
+    z-index: 19930813;
+}
+
+#win10 .btn_group {
+    height: 100%;
+}
+
+#win10 .btn_group .btn {
+    float: left;
+    color:#333;
+    font-weight:bold;
+    text-align: center;
+    height: 100%;
+    line-height: 30px;
+    text-overflow:ellipsis;
+    overflow: hidden;
+    transition: background-color 0.3s;
+}
+
+#win10 .btn_group .btn:hover {
+    color: white;
+    background-color: rgba(49,156,241,0.71);
+    cursor: pointer;
+}
+
+#win10_btn_group_left{
+    float: left;
+    overflow: auto;
+    max-width:200px;
+    padding-left:0.5%;
+}
+
+#win10_btn_group_middle{
+    float: left;
+    overflow: auto;
+    display: inline-block;
+}
+#win10_btn_group_middle .btn_close{
+    position: absolute;
+    right: 0;
+    width: 20px;
+    text-align: center;
+    color: transparent;
+}
+#win10_btn_group_middle .btn:hover .btn_close{
+    color: rgba(131, 168, 157, 0.71);
+}
+#win10_btn_group_middle .btn:hover .btn_close:hover{
+    color: white;
+}
+
+#win10_btn_group_middle .btn_title{
+    float: left;
+    width: 100%;
+    display: inline-block;
+    padding-left: 15px;
+    padding-right: 15px; 
+    text-overflow: ellipsis;
+    overflow: hidden;
+    text-align: left;
+    white-space: nowrap;
+}
+
+#win10_btn_group_middle::-webkit-scrollbar {
+    width: 2px;
+}
+
+#win10_btn_group_middle::-webkit-scrollbar-track {
+    background-color: #808080;
+}
+
+#win10_btn_group_middle::-webkit-scrollbar-thumb {
+    background-color: rgba(30, 39, 34, 0.41);
+}
+
+#win10_btn_group_right{
+    float: right;
+    max-width:200px;
+    overflow: auto;
+}
+
+#win10_btn_group_left .btn {
+    height: 100%;
+    width: 35px;
+    overflow: hidden;
+    font-size: 14px;
+}
+
+#win10_btn_group_right .btn {
+    height: 100%;
+    min-width: 4px;
+    padding: 0 10px;
+    font-size: 12px ;
+}
+
+#win10_btn_show_desktop {
+    border-left: grey 1px solid;
+    width: 4px;
+    margin-left: 3px;
+    padding: 0 !important
+}
+
+#win10_btn_time {
+    font-size: 12px;
+    /*line-height: 30px !important  */
+}
+#win10-menu {
+    position: fixed;
+    top: 30px;
+    background-color: rgba(255,255,255,0.75);
+    height:auto;
+    width: 12.5%;
+    max-width: 880px;
+    overflow: auto;
+    z-index: 1000;
+    overflow-y: hidden;
+    transition: bottom 0.5s ;
+	border-radius: 0 0 5px 5px;
+}
+
+#win10-menu.hidden {
+    top:-70%;
+}
+
+#win10-menu .blocks::-webkit-scrollbar,.list::-webkit-scrollbar,#win10_command_center::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+#win10-menu .blocks::-webkit-scrollbar-track,.list::-webkit-scrollbar-track,#win10_command_center::-webkit-scrollbar-track {
+    background-color: rgba(74, 84, 78, 0.41);
+}
+
+#win10-menu .blocks::-webkit-scrollbar-thumb,.list::-webkit-scrollbar-thumb,#win10_command_center::-webkit-scrollbar-thumb {
+    background-color: #6a6a6a;
+}
+
+#win10-menu .blocks::-webkit-scrollbar-button ,.list::-webkit-scrollbar-button ,#win10_command_center::-webkit-scrollbar-button  {
+    /*background-color: #6a6a6a;*/
+}
+
+#win10-menu .list,.blocks{
+    float: left;
+    width: 180px;
+    height:100%;
+    overflow: auto;
+    -webkit-animation-duration: 0.5s;
+    animation-duration: 0.5s;
+}
+
+#win10-menu .list{
+    width:100%;
+    padding:0;
+    padding-top: 5px;
+    font-size: 12px;
+    height: 100%;
+}
+
+#win10-menu .list .item.has-sub-down::after{
+    font: normal normal normal 14px/1 FontAwesome;
+    content:"\f107";
+    line-height: inherit;
+    float: right;
+}
+
+#win10-menu .list .item.has-sub-up::after{
+    font: normal normal normal 14px/1 FontAwesome;
+    content:"\f106";
+    line-height: inherit;
+    float: right;
+}
+
+#win10-menu .list .item,.sub-item{
+    color:#333;
+    margin: 1px 0;
+    line-height: 40px;
+    padding: 0 10px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    transition: background-color 0.3s;
+    position: relative;
+    width: calc(100% - 20px);
+}
+
+#win10-menu .list .item>.icon,#win10-menu .list .sub-item>.icon,.sub-item>.icon{
+    line-height: 36px;
+    font-size: 22px;
+    float: left;
+    margin-right: 0.5em;
+    width: 36px;
+    position: relative;
+    top:2px;
+
+}
+
+#win10-menu .list .sub-item{
+    padding-left:30px;
+    width: calc(100% - 40px);
+}
+
+#win10-menu .list .item:hover,.sub-item:hover{
+    background-color:  rgba(49,156,241,0.71);
+    cursor: pointer;
+}
+
+#win10-menu .blocks{
+    max-width: 650px;
+    width:calc(100% - 260px);
+}
+
+#win10-menu-switcher{
+    position: absolute;
+    height: 100%;
+    border-left: 1px solid grey;
+    top: 0;
+    right: 0;
+    display: none;
+    width: 30px;
+    cursor: pointer;
+}
+
+#win10-menu-switcher:active{
+    background-color: rgba(92, 109, 92, 0.81);
+}
+
+#win10-menu .menu_group {
+    float: left;
+    width: 300px;
+    color: white;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+#win10-menu .menu_group .title {
+    padding: 5px;
+    padding-top: 12px;
+    font-size: 13px;
+}
+
+#win10-menu .menu_group:hover .title::after{
+    font: normal normal normal 14px/1 FontAwesome;
+    content:"\f0c9";
+    line-height: inherit;
+    float: right;
+    margin-right: 17px;
+    color: grey;
+}
+
+
+
+
+#win10 #win10-shortcuts {
+    height: calc(100% - 40px);
+    position: relative;
+}
+
+#win10 #win10-shortcuts.shortcuts-hidden .shortcut{display: none}
+
+#win10 #win10-shortcuts .shortcut {
+    width: 80px;
+    overflow: hidden;
+    cursor: pointer;
+    padding: 0;
+    position: absolute;
+}
+
+#win10 #win10-shortcuts .shortcut:hover {
+    background-color: rgba(255, 255, 255, 0.11);
+}
+
+#win10 #win10-shortcuts .shortcut>.icon {
+    width: 50px;
+    height: 50px;
+    overflow: hidden;
+    margin: 0 auto;
+    color: white;
+    box-sizing: border-box;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    text-align: center;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    display: block;
+    font-size: 37px;
+    line-height: 50px;
+}
+
+#win10-shortcuts .shortcut .title {
+    color: white;
+    font-size: 12px;
+    text-align: center;
+    line-height: 18px;
+    margin-bottom: 5px;
+}
+
+#win10_command_center {
+    position: fixed;
+    right: 0;
+    top: 30px;
+    width: 350px;
+    background-color: rgba(255,255,255,0.7);
+    height: calc(100% - 30px);
+    transition: all 0.5s;
+    overflow-x: hidden;
+    overflow-y: auto;
+    color: #333;
+    box-sizing: border-box;
+    z-index: 1000;
+}
+
+#win10_command_center.hidden_right {
+    right: -350px;
+}
+
+#win10_command_center > .title{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding-left: 10px;
+    transition: background-color 0.5s;
+}
+
+#win10_command_center > .title:hover{
+    background-color: rgba(255, 255, 255, 0.19);
+}
+
+#win10_btn_group_right #win10_btn_command{
+    font-size: 20px;
+}
+#win10_btn_command .msgNof{
+    position: fixed;
+    right: 0;
+    bottom: 20px;
+    border: 1px solid red;
+    background-color: red;
+    color: white;
+    border-radius: 3px;
+}
+#win10_btn_command_center_clean_all{
+    color:#777;
+    text-align: right;
+    font-size:12px;
+    float: right;
+    margin-top:40px;
+    margin-right:24px;
+    transition: color 0.5s;
+}
+
+#win10_btn_command_center_clean_all:hover{
+    cursor: pointer;
+    color:#333;
+}
+
+#win10_command_center .msgs{
+    position: absolute;
+    top:60px;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    /*padding: 10px;*/
+}
+
+#win10_command_center .btn_close_msg{
+    line-height: inherit;
+    transition: color 0.5s ;
+}
+
+#win10_command_center .msgs .msg{
+    width: calc(100% - 20px);
+    min-height: 40px;
+    padding:10px;
+    margin-top: 4px;
+    transition: background-color 0.5s;
+    position: relative;
+}
+
+#win10_command_center .msgs .msg.animated{
+    -webkit-animation-duration: 0.5s;
+    animation-duration: 0.5s;
+}
+
+#win10_command_center .msgs .msg:hover{
+    cursor: default;
+    background-color: rgba(255, 255, 255, 0.19);
+}
+#win10_command_center .msgs .msg:hover .title{
+    color: #333;
+}
+#win10_command_center .msgs .msg:hover>.btn_close_msg{
+    color: grey;
+}
+
+#win10_command_center .msgs .msg:hover>.content{
+    color: #333;
+}
+
+#win10_command_center .msgs .msg>.title{
+    color: #777;
+    font-size: 14px;
+    line-height: 28px;
+}
+
+#win10_command_center .msgs .msg>.btn_close_msg{
+    cursor: pointer;
+    color: transparent;
+    padding: 3px;
+    position: absolute;
+    top: 11px;
+    right: 11px;
+}
+
+#win10_command_center .msgs .msg>.btn_close_msg:hover{
+    color: white;
+}
+
+#win10_command_center .msgs .msg>.content{
+    font-size: 12px;
+    color: #777;
+    padding-bottom: 5px;
+}
+
+#win10_btn_group_middle .btn{
+    float: left;
+    box-sizing: border-box;
+    height: inherit;
+    max-width: 140px;
+    line-height: 40px;
+    color: white;
+    text-align: center;
+    font-size: 12px;
+    word-break: keep-all;
+    padding: 0 10px;
+    margin-right: 1px; 
+    position: relative;
+}
+
+#win10_btn_group_middle .btn.active{
+   /* background: #F6F6F6; */
+   -webkit-box-shadow: 0  0 30px 2px rgba(0, 0, 0, 0.8);
+    -moz-box-shadow: 0  0 30px 2px rgba(0, 0, 0, 0.8);
+    box-shadow: 0  0 30px 2px rgba(0, 0, 0, 0.8);
+}
+
+#win10_btn_group_middle .btn:hover{
+    cursor: pointer;
+}
+
+.win10-open-iframe{
+	/*繁华年间许你一世安宁提供*/
+    background-color: transparent;
+    /* border: 1px solid #323232; */
+    border: #f0f6f6 solid 1px !important;
+    -webkit-box-shadow: 0 0 50px 0 rgba(0, 0, 0, 0.8);
+    -moz-box-shadow: 0 0 50px 0 rgba(0, 0, 0, 0.8);
+    box-shadow: 0 0 50px 0 rgba(0, 0, 0, 0.8);
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+}
+
+.win10-open-iframe .layui-layer-content{
+    background-color: white;
+    max-height: calc(100% - 30px);
+}
+
+.win10-open-iframe .layui-layer-title{
+    box-sizing: border-box;
+    background-color: #F6F6F6;
+    padding-right: 160px;
+	border-radius:4px 4px 0px 0px;
+    color: #333;
+	text-align:center;
+}
+.win10-open-iframe.hide{
+    display: none;
+}
+.win10-btn_refresh{
+    float: right;
+}
+#win10 .img-loader{
+    display: none;
+}
+
+
+.win10-open-iframe  .layui-layer-min cite{display: none;}
+.win10-open-iframe .layui-layer-max:hover{background-image:none}
+.win10-open-iframe .layui-layer-max,.layui-layer-maxmin{background:none}
+.win10-open-iframe .layui-layer-setwin a.layui-layer-close1:hover::before{
+    content:"\f057";
+    color: #FF6057;
+    font: normal normal normal 18px/1 FontAwesome;
+}
+
+.win10-open-iframe .layui-layer-min::before{
+    content:"\f111";
+    color: #28CA40;
+    font: normal normal normal 18px/1 FontAwesome;
+}
+
+.win10-open-iframe .layui-layer-min:hover::before{
+    content:"\f056";
+    color: #28CA40;
+    font: normal normal normal 18px/1 FontAwesome;
+}
+
+.win10-open-iframe .layui-layer-max::before{
+    content:"\f111";
+    color: #FFBD2E;
+    font: normal normal normal 18px/1 FontAwesome;
+}
+
+.win10-open-iframe .layui-layer-max:hover::before{
+    content:"\f055";
+    color: #FFBD2E;
+    font: normal normal normal 18px/1 FontAwesome;
+}
+
+.win10-open-iframe .layui-layer-maxmin.layui-layer-max::before{
+    content:"\f111";
+    color: #FFBD2E;
+    font: normal normal normal 18px/1 FontAwesome;
+}
+
+.win10-open-iframe .layui-layer-maxmin.layui-layer-max:hover::before{
+    content:"\f055";
+    color: #FFBD2E;
+    font: normal normal normal 18px/1 FontAwesome;
+}
+
+.win10-open-iframe .layui-layer-close::before{
+    content:"\f111";
+    color: #FF6057;
+    font: normal normal normal 18px/1 FontAwesome;
+}
+
+.win10-open-iframe .layui-layer-min,.layui-layer-close,.layui-layer-max{
+    text-decoration: none;
+}
+.win10-btn-refresh,.win10-btn-change-url,.win10-btn-refresh:hover,.win10-btn-change-url:hover{
+		text-decoration:none;
+}
+
+.win10-open-iframe .win10-btn-refresh::before,.win10-btn-change-url::before{
+    content:"\f111";
+    color: #029FFF;
+    font: normal normal normal 18px/1 FontAwesome;
+}
+
+.win10-open-iframe .win10-btn-refresh:hover::before,.win10-btn-change-url:hover::before{
+    content:"\f192";
+    color: #029FFF;
+    font: normal normal normal 18px/1 FontAwesome;
+}
+
+.win10-layer-open-browser .layui-layer-min,.layui-layer-close,.layui-layer-max{
+    text-decoration: none;
+}
+
+.win10-layer-open-browser .layui-layer-ico{background-image:none;}
+
+.win10-layer-open-browser textarea{
+    margin: 20px;
+    outline: none;
+    resize: none;
+}
+
+.win10-layer-open-browser  .layui-layer-min cite{display: none;}
+.win10-layer-open-browser .layui-layer-max:hover{background-image:none}
+.win10-layer-open-browser .layui-layer-max,.layui-layer-maxmin{background:none}
+.win10-layer-open-browser .layui-layer-setwin a.layui-layer-close:hover::before{
+    content:"\f057";
+    color: #FF6057;
+    font: normal normal normal 18px/1 FontAwesome;
+}
+
+.win10-layer-open-browser .layui-layer-min::before{
+    content:"\f111";
+    color: #28CA40;
+    font: normal normal normal 18px/1 FontAwesome;
+}
+
+.win10-layer-open-browser .layui-layer-min:hover::before{
+    content:"\f056";
+    color: #28CA40;
+    font: normal normal normal 18px/1 FontAwesome;
+}
+
+.win10-layer-open-browser .layui-layer-max::before{
+    content:"\f111";
+    color: #FFBD2E;
+    font: normal normal normal 18px/1 FontAwesome;
+}
+
+.win10-layer-open-browser .layui-layer-max:hover::before{
+    content:"\f055";
+    color: #FFBD2E;
+    font: normal normal normal 18px/1 FontAwesome;
+}
+
+.win10-layer-open-browser .layui-layer-maxmin.layui-layer-max::before{
+    content:"\f111";
+    color: #FFBD2E;
+    font: normal normal normal 18px/1 FontAwesome;
+}
+
+.win10-layer-open-browser .layui-layer-maxmin.layui-layer-max:hover::before{
+    content:"\f055";
+    color: #FFBD2E;
+    font: normal normal normal 18px/1 FontAwesome;
+}
+
+.win10-layer-open-browser .layui-layer-close::before{
+    content:"\f111";
+    color: #FF6057;
+    font: normal normal normal 18px/1 FontAwesome;
+}
+
+.win10-layer-open-browser .layui-layer-min,.layui-layer-close,.layui-layer-max{
+    text-decoration: none;
+}
+
+/*右键菜单*/
+#win10 .win10-context-menu { left: 0;top: 0;position: fixed; width: 150px; height: auto; background-color: rgb(255, 255, 255); border: #CCC 1px solid; display: block; border-radius: 5px; z-index: 99999999; }
+#win10 .win10-context-menu ul { margin: 0px; padding: 0px; }
+#win10 .win10-context-menu ul li {transition: background-color 0.5s;cursor: default;padding: 0px 1em; list-style: none; line-height: 30px; height: 30px; margin: 3px 0;  font-size: 13px; }
+#win10 .win10-context-menu ul li:hover { background-color: #DDD; }
+#win10 .win10-context-menu ul li a {text-decoration: none; display: block; height: 100%; color: #333; outline: none; }
+#win10 .win10-context-menu ul hr { margin: 0; height: 0px; border: 0px; border-bottom: rgb(233,233,233) 1px solid;border-top: none }
+
+/*块级按钮*/
+.win10-open-iframe .layui-layer-ico{background-image:none;}
+.win10-open-iframe .layui-layer-setwin {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    font-size: 0;
+    line-height: 40px;
+    height: 40px;
+}
+.win10-open-iframe .layui-layer-setwin a {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    font-size: 13px;
+    text-align: center;
+    overflow: hidden;
+	margin:0px;
+}
+
+.win10-open-iframe .layui-layer-title .icon ,#win10_btn_group_middle .btn_title .icon{
+    font-size: 15px;
+    padding: 1px;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    display: inline-block;
+    border-radius: 3px;
+    text-align: center;
+    margin-right: 0.5em;
+}
+.win10-open-iframe .layui-layer-title img.icon,#win10_btn_group_middle .btn_title img.icon{
+    width: 20px;
+    position: relative;
+    top:5px ;
+    margin-right: 0.5em;
+}
+
+#win10-menu>.list>.sub-item img.icon,#win10-menu>.list>.item img.icon{
+    width: 36px;
+    height:36px;
+    position: relative;
+    top:2px ;
+    margin-right: 0.5em;
+}
+
+/*--------------尾部--------------------*/
+#footer{
+    height: 60px;
+    width: 100%;
+    position: absolute;
+    bottom: 10px;
+    text-align: center;
+}
+
+#footer .dock{
+    /*width: 72%; */
+    height: 100%;
+    line-height: 60px;
+    display: inline-block;
+    border-radius: 5px;
+    background-color: rgba(255,255,255,0.45) ;/* IE9、标准浏览器、IE6和部分IE7内核的浏览器(如QQ浏览器)会读懂 */
+    -webkit-box-shadow: 0 0 50px 0 rgba(0, 0, 0, 0.8);
+    -moz-box-shadow: 0 0 50px 0 rgba(0, 0, 0, 0.8);
+    box-shadow: 0 0 50px 0 rgba(0, 0, 0, 0.8);
+    -webkit-border-top-left-radius: 6px;
+    -webkit-border-top-right-radius: 6px;
+}
+@media \0screen\,screen\9 {/* 只支持IE6、7、8 */
+#footer .dock{
+    /*width: 72%; */
+    height: 100%;
+    line-height: 60px;
+    background-color: #fff;
+    display: inline-block;
+    border-radius: 5px;
+    filter:Alpha(opacity=0.45);
+    position:static; /* IE6、7、8只能设置position:static(默认属性) ，否则会导致子元素继承Alpha值 */
+    *zoom:1; /* 激活IE6、7的haslayout属性，让它读懂Alpha */
+}
+  .demo ul{
+    position: relative;/* 设置子元素为相对定位，可让子元素不继承Alpha值 */
+  }  
+}
+#footer .dock ul{
+    display: inline-block;
+}
+
+#footer .dock img{
+	z-index:222;
+    width: 50px;
+    height: 50px;
+}
+
+#footer .dock ul li{
+    float: left;
+    margin: 5px 10px;
+    /*过渡的时间 效果*/
+    -webkit-transition: 0.15s linear;
+}
+
+#footer .dock ul li:hover{
+    /*参照*/
+    -webkit-transform-origin:bottom center;
+    /*形变*/
+    -webkit-transform:scale(1.5);
+}
+
+#footer .dock .dock-tips{
+	color:white;
+	font-size:0.6em;
+	border-radius: 5px;
+	background: rgba(0,0,0,0.5);
+	height: 20px;
+	line-height: 20px;
+	display: none;
+	margin-top: -30px;
+	margin-bottom: 10px;
+	flex-direction: column;
+	align-items: center;
+}
+#footer .dock .dock-tips .arrow{
+	opacity: 0.5;
+	border-left:5px solid transparent; 
+	border-right:5px solid transparent;
+	border-top:5px solid #000; 
+	border-bottom:5px solid transparent; 
+	width:0;
+	height:0;
+}
+
+/*各种颜色 具体效果见 https://www.kancloud.cn/qq85569256/xzui/350010*/
+.win10-open-iframe .black-green, #win10 .black-green{background:#009688!important;}
+.win10-open-iframe .green,#win10 .green{background:#5FB878!important;}
+.win10-open-iframe .black,#win10 .black{background:#393D49!important;}
+.win10-open-iframe .black,#win10 .blue{background:#1E9FFF!important;}
+.win10-open-iframe .orange,#win10 .orange{background:#F7B824!important;}
+.win10-open-iframe .red,#win10 .red{background:#FF5722!important;}
+.win10-open-iframe .dark,#win10 .dark{background:#2F4056!important;}
+.win10-open-iframe .purple,#win10 .purple{background:#b074e6!important;}
+@media screen and (max-width:768px){
+    #win10-menu{
+        width:100%;
+        height: calc(100% - 31px);
+    }
+    #win10-menu.hidden{
+        top: -100% ;
+    }
+    #win10_command_center{
+        width: 100%;
+    }
+    #win10_command_center.hidden_right {
+        right: -100%;
+    }
+    .layui-layer-setwin .layui-layer-max{
+        display: none;
+    }
+    #win10_btn_group_left .btn {
+        height: 100%;
+        width: 40px;
+        overflow: hidden;
+        font-size: 16px;
+    }
+    #win10_btn_group_right .btn {
+        height: 100%;
+        min-width: 4px;
+        padding: 0 10px;
+        font-size: 16px!important;
+    }
+    #win10_btn_show_desktop {
+        border-left: grey 1px solid;
+        width: 30px;
+        margin-left: 3px;
+        padding: 0 !important
+    }
+    #win10_btn_group_left{
+        max-width:100px;
+    }
+    #win10_btn_group_middle{
+        width:calc(100% - 160px);
+    }
+    #win10_btn_group_middle .btn{
+        padding: 0 3px;
+    }
+    #win10_btn_group_right{
+        max-width:150px;
+    }
+    #win10-menu .list{
+        padding-left: 2px;
+        position: absolute;
+        width: calc(100% - 31px);
+        left: 0;
+        top: 0;
+
+    }
+    #win10-menu .blocks{
+        overflow-x: hidden;
+        position: absolute;
+        width:calc(100% - 31px);
+        left: 0;
+        top: 0;
+    }
+
+    #win10-menu .menu_group {
+        width: 90%;
+        float: none;
+        margin: 0 auto;
+        clear: both;
+    }
+
+    #win10_btn_time{display: none}
+    #win10-menu-switcher{
+        display: none;
+    }
+    #win10-menu>.win10-menu-hidden{
+        display: block;
+    }
+    #win10_btn_group_middle .btn_close{
+        display: none;
+    }
+    .win10-open-iframe .layui-layer-setwin a {
+        width: 32px;
+    }
+	#footer{
+		bottom:0;
+	}
+	
+	#footer .dock{
+		width: 100%;
+		border-radius: 0px;
+	}
+}

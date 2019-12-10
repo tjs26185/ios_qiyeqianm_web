@@ -1,0 +1,51 @@
+.asynctips{
+	position:absolute;
+	top:0;
+	left:0;
+	z-index:3000;
+	height:38px;
+	overflow:hidden
+}
+.asynctips table{
+	margin:0;
+	padding:0
+}
+.asynctips_left,.asynctips_middle,.asynctips_right,.asynctips_alert,.asynctips_success,.asynctips_error,.asynctips_wait{
+	height:38px;
+	background:url(asynctips_bg.gif) no-repeat
+}
+.asynctips_left{
+	width:5px;
+	background-position:0 -26px
+}
+.asynctips_middle{
+	color:#555;
+	padding:0 4px;
+	background-repeat:repeat-x;
+	background-position:0 -64px;
+	font:bold 14px Tahoma,sans-serif
+}
+.asynctips_right{
+	width:5px;
+	background-position:-73px -26px
+}
+.asynctips_alert,.asynctips_success,.asynctips_error,.asynctips_wait{
+	width:26px;
+	background-repeat:repeat-x;
+	background-position:0 -64px
+}
+.asynctips_alert span,.asynctips_success span,.asynctips_error span,.asynctips_wait span{
+	display:block;
+	width:26px;
+	height:26px;
+	background:url(asynctips_bg.gif) no-repeat
+}
+.asynctips_success span{
+	background-position:-26px 0
+}
+.asynctips_error span{
+	background-position:-52px 0
+}
+.asynctips_wait span{
+	background-position:0px 0
+}

